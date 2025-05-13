@@ -2,6 +2,8 @@ use serde::{Deserialize, Serialize};
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
 use yew_agent::{Bridge, Bridged};
+use yew_router::prelude::Link;
+use crate::Route;
 
 use crate::services::event_bus::EventBus;
 use crate::{services::websocket::WebsocketService, User};
@@ -163,7 +165,14 @@ impl Component for Chat {
                     }
                 </div>
                 <div class="grow h-screen flex flex-col">
-                    <div class="w-full h-14 border-b-2 border-gray-300"><div class="text-xl p-3">{"💬 Chat!"}</div></div>
+                    <div class="w-full h-14 border-b-2 border-gray-300 flex items-center justify-between px-4">
+                        <div class="text-xl">{"💬 Chat!"}</div>
+                        <Link<Route> to={Route::Profile}>
+                            <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">
+                                {"Go to Profile"}
+                            </button>
+                        </Link<Route>>
+                    </div>
                     <div class="w-full grow overflow-auto border-b-2 border-gray-300">
                         {
                             self.messages.iter().map(|m| {
