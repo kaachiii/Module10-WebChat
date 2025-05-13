@@ -30,4 +30,4 @@ Profile button
 Profile page
 ![Profile page](images/Screenshot%20(1094).png)
 
-Saya menambahkan tombol di halaman chat yang bisa digunakan untuk melihat profil pengguna. Saat tombol diklik, pengguna akan diarahkan ke halaman `/profile`. Di halaman ini, saya menampilkan foto profil default sebagai avatar supaya tampilannya lebih menarik. Selain itu, saya juga menampilkan nama pengguna yang sedang login, yang diambil dari konteks `User`. Agar lebih menarik, saya menggunakan format sapaan `("Hello, {}!", username)`.
+Saya menambahkan tombol di halaman chat yang bisa digunakan untuk melihat profil pengguna. Saat tombol diklik, pengguna akan diarahkan ke halaman `/profile`. Di halaman ini, saya menampilkan foto profil default sebagai avatar agar tampilannya lebih menarik. Selain itu, saya juga menampilkan nama pengguna yang sedang login, yang diambil dari konteks `User`. Agar lebih santai, saya menggunakan format sapaan `("Hello, {}!", username)`.
